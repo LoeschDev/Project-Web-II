@@ -3,178 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Loesch - Rede Social</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Rede Social</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <!-- Barra lateral esquerda -->
-    <aside class="sidebar">
-        <!-- Logo -->
-        <div class="logo">
-            <h1>Social</h1>
+    <!-- Barra de Navegação Vertical -->
+    <nav class="sidebar">
+        <div class="nav-logo">
+            <h2>Social</h2>
         </div>
-
-        <!-- Menu de navegação -->
-        <nav class="nav-menu">
-            <ul>
-                <li class="nav-item active">
-                    <span class="nav-icon">⌂</span>
+        <ul class="nav-menu">
+            <li>
+                <button class="nav-button active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
                     <span class="nav-text">Início</span>
-                </li>
-                <li class="nav-item">
-                    <span class="nav-icon">⚲</span>
-                    <span class="nav-text">Explorar</span>
-                </li>
-                <li class="nav-item">
-                    <span class="nav-icon">✉</span>
-                    <span class="nav-text">Mensagens</span>
-                </li>
-                <li class="nav-item">
-                    <span class="nav-icon">◉</span>
-                    <span class="nav-text">Notificações</span>
-                </li>
-                <li class="nav-item">
-                    <span class="nav-icon">◐</span>
+                </button>
+            </li>
+            <li>
+                <button class="nav-button">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    </svg>
+                    <span class="nav-text">Pesquisa</span>
+                </button>
+            </li>
+            <li>
+                <button class="nav-button">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                    </svg>
+                    <span class="nav-text">Nova Postagem</span>
+                </button>
+            </li>
+            <li>
+                <button class="nav-button">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
                     <span class="nav-text">Perfil</span>
-                </li>
-            </ul>
-        </nav>
+                </button>
+            </li>
+        </ul>
+    </nav>
 
-        <!-- Perfil do usuário -->
-        <div class="user-profile">
-            <div class="user-avatar">DL</div>
-            <div class="user-info">
-                <h3 class="user-name">Daniel Loesch</h3>
-                <p class="user-handle">@danielloesch</p>
-            </div>
-        </div>
-    </aside>
-
-    <!-- Área de conteúdo principal -->
+    <!-- Conteúdo Principal -->
     <main class="main-content">
-        <!-- Caixa de postagem -->
-        <div class="post-box">
-            <div class="post-avatar">DL</div>
-            <div class="post-input">
-                <textarea placeholder="O que você está pensando?" readonly></textarea>
-                <button class="post-button">Publicar</button>
+        <!-- Cabeçalho do Usuário -->
+        <header class="user-header">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <img src="IMG/eu.jpg" alt="Avatar do usuário">
+                </div>
+                <div class="user-details">
+                    <h1 class="user-name">Daniel Loesch</h1>
+                    <p class="user-username">@danielloesch</p>
+                </div>
             </div>
-        </div>
+            <button class="edit-profile-btn">Editar Perfil</button>
+        </header>
 
-        <!-- Feed de posts -->
-        <div class="feed">
-            <!-- Post 1 -->
+        <!-- Formulário para Nova Postagem -->
+        <section class="post-form-section">
+            <form class="post-form">
+                <div class="form-avatar">
+                    <img src="IMG/eu.jpg" alt="Seu avatar">
+                </div>
+                <div class="form-content">
+                    <textarea class="post-input" placeholder="Quais são as novidades?" rows="3"></textarea>
+                    <button type="submit" class="post-btn">Postar</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Feed de Postagens -->
+        <section class="posts-feed">
+            <!-- Postagem 1 -->
             <article class="post">
                 <div class="post-header">
-                    <div class="post-author-avatar">JS</div>
-                    <div class="post-author-info">
-                        <h4 class="post-author-name">João Santos</h4>
-                        <p class="post-author-handle">@joaosantos</p>
+                    <div class="post-avatar">
+                        <img src="IMG/Joao.jpg" alt="Avatar João Silva">
                     </div>
-                </div>
-                <div class="post-content">
-                    <p>Gosto de musica.</p>
-                </div>
-                <div class="post-actions">
-                    <span class="post-action">
-                        <span class="action-icon">♡</span>
-                        <span class="action-count">24</span>
-                    </span>
-                    <span class="post-action">
-                        <span class="action-icon">◐</span>
-                        <span class="action-count">8</span>
-                    </span>
-                    <span class="post-action">
-                        <span class="action-icon">⟲</span>
-                        <span class="action-count">3</span>
-                    </span>
-                </div>
-            </article>
-
-            <!-- Post 2 -->
-            <article class="post">
-                <div class="post-header">
-                    <div class="post-author-avatar">MC</div>
-                    <div class="post-author-info">
-                        <h4 class="post-author-name">Maria Costa</h4>
-                        <p class="post-author-handle">@mariacosta</p>
+                    <div class="post-user-info">
+                        <h3 class="post-name">João Silva</h3>
+                        <p class="post-username">@joaosilva</p>
+                        <span class="post-time">• 2h</span>
                     </div>
                 </div>
                 <div class="post-content">
                     <p>Reflexão do dia: Amanhã será outro dia.</p>
                 </div>
                 <div class="post-actions">
-                    <span class="post-action">
-                        <span class="action-icon">♡</span>
-                        <span class="action-count">42</span>
-                    </span>
-                    <span class="post-action">
-                        <span class="action-icon">◐</span>
-                        <span class="action-count">15</span>
-                    </span>
-                    <span class="post-action">
-                        <span class="action-icon">⟲</span>
-                        <span class="action-count">7</span>
-                    </span>
+                    <button class="action-btn like-btn">
+                        <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        <span class="action-count">14 curtidas</span>
+                    </button>
+                    <button class="action-btn comment-btn">
+                        <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h11c.55 0 1-.45 1-1z"/>
+                        </svg>
+                        <span class="action-count">3 comentários</span>
+                    </button>
+                    <button class="action-btn share-btn">
+                        <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+                        </svg>
+                        <span class="action-count">Compartilhar</span>
+                    </button>
                 </div>
             </article>
 
-            <!-- Post 3 -->
+            <!-- Postagem 2 -->
             <article class="post">
                 <div class="post-header">
-                    <div class="post-author-avatar">PL</div>
-                    <div class="post-author-info">
-                        <h4 class="post-author-name">Pedro Lima</h4>
-                        <p class="post-author-handle">@pedrolima</p>
+                    <div class="post-avatar">
+                        <img src="IMG/ana.jpg" alt="Avatar Ana Paula">
+                    </div>
+                    <div class="post-user-info">
+                        <h3 class="post-name">Ana Paula</h3>
+                        <p class="post-username">@anapaula</p>
+                        <span class="post-time">• 4h</span>
                     </div>
                 </div>
                 <div class="post-content">
                     <p>Compartilhando uma dica valiosa: Não sejá front-end.</p>
                 </div>
                 <div class="post-actions">
-                    <span class="post-action">
-                        <span class="action-icon">♡</span>
-                        <span class="action-count">67</span>
-                    </span>
-                    <span class="post-action">
-                        <span class="action-icon">◐</span>
-                        <span class="action-count">23</span>
-                    </span>
-                    <span class="post-action">
-                        <span class="action-icon">⟲</span>
-                        <span class="action-count">12</span>
-                    </span>
+                    <button class="action-btn like-btn">
+                        <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        <span class="action-count">9 curtidas</span>
+                    </button>
+                    <button class="action-btn comment-btn">
+                        <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h11c.55 0 1-.45 1-1z"/>
+                        </svg>
+                        <span class="action-count">1 comentário</span>
+                    </button>
+                    <button class="action-btn share-btn">
+                        <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+                        </svg>
+                        <span class="action-count">Compartilhar</span>
+                    </button>
                 </div>
             </article>
 
-            <!-- Post 4 -->
+            <!-- Postagem 3 -->
             <article class="post">
                 <div class="post-header">
-                    <div class="post-author-avatar">CM</div>
-                    <div class="post-author-info">
-                        <h4 class="post-author-name">Carla Mendes</h4>
-                        <p class="post-author-handle">@carlamendes</p>
+                    <div class="post-avatar">
+                        <img src="IMG/Carlos.jpg" alt="Avatar Carlos Santos">
+                    </div>
+                    <div class="post-user-info">
+                        <h3 class="post-name">Carlos Santos</h3>
+                        <p class="post-username">@carlossantos</p>
+                        <span class="post-time">• 6h</span>
                     </div>
                 </div>
                 <div class="post-content">
-                    <p>Bom dia, acabou as ideias</p>
+                    <p>Bom dia, acabou as ideias.</p>
                 </div>
                 <div class="post-actions">
-                    <span class="post-action">
-                        <span class="action-icon">♡</span>
-                        <span class="action-count">31</span>
-                    </span>
-                    <span class="post-action">
-                        <span class="action-icon">◐</span>
-                        <span class="action-count">9</span>
-                    </span>
-                    <span class="post-action">
-                        <span class="action-icon">⟲</span>
-                        <span class="action-count">4</span>
-                    </span>
+                    <button class="action-btn like-btn">
+                        <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        <span class="action-count">23 curtidas</span>
+                    </button>
+                    <button class="action-btn comment-btn">
+                        <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h11c.55 0 1-.45 1-1z"/>
+                        </svg>
+                        <span class="action-count">7 comentários</span>
+                    </button>
+                    <button class="action-btn share-btn">
+                        <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+                        </svg>
+                        <span class="action-count">Compartilhar</span>
+                    </button>
                 </div>
             </article>
-        </div>
+        </section>
     </main>
 </body>
 </html>
